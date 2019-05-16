@@ -1,0 +1,95 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css?family=Rock+Salt');
+
+/* tags */
+body {
+  margin: 0;
+  --header-font: 'Rock Salt', cursive;
+  --header-bg-light: #8FF7A7;
+  --header-bg-dark: #27442E;
+  --text-color-light: #0E0F19;
+  --text-color-dark: #e9e9ea;
+  --highlight-color-light: #2C382E;
+
+  --bg-transition: background-color 0.5s linear;
+  --text-transition: color 0.5s linear;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  width: 100vw;
+  height: 10vh;
+  min-height: 100px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--header-bg-light);
+
+  transition: var(--bg-transition);
+}
+
+header > h1 {
+  color: var(--text-color-light);
+
+  font-size: 3vh;
+  font-family: var(--header-font);
+
+  transition: var(--text-transition);
+}
+
+header > .sandwichOpen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  width: 10vh;
+  min-width: 100px;
+  height: 10vh;
+  min-height: 100px;
+  max-height: 100%;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+
+/* classes */
+.sandwichOpen > img {
+  object-fit: contain;
+  height: 75%;
+}
+
+.sandwichOpen > img.dark {
+  position: absolute;
+  left: 12.5%;
+
+  opacity: 0;
+
+  transition: opacity 0.5s linear;
+}
+
+/* dark mode changes */
+body.dark > header {
+  background-color: var(--header-bg-dark)
+}
+
+body.dark > header > h1 {
+  color: var(--text-color-dark);
+}
+
+body.dark > header > .sandwichOpen > img.dark {
+  opacity: 1;
+}
+
+/* media queries */
+@media only screen and (orientation: landscape) {
+  header > h1 {
+    font-size: 2em
+  }
+}
