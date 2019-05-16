@@ -1,10 +1,11 @@
 /* fonts */
-@import url('https://fonts.googleapis.com/css?family=Rock+Salt');
+@import url('https://fonts.googleapis.com/css?family=Oswald|Rock+Salt');
 
 /* tags */
 body {
   margin: 0;
   --header-font: 'Rock Salt', cursive;
+  --body-font: 'Oswald', sans-serif;
   --header-bg-light: #8FF7A7;
   --header-bg-dark: #27442E;
   --text-color-light: #0E0F19;
@@ -58,6 +59,22 @@ header > .sandwichOpen {
   top: 0;
 }
 
+sandwichNav {
+  position: absolute;
+  left: -100vw;
+  top: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: var(--header-bg-light);
+
+  transition: left 0.25s ease;
+}
+
+sandwichNav.open {
+  left: 0;
+}
 
 /* classes */
 .sandwichOpen > img {
@@ -72,6 +89,18 @@ header > .sandwichOpen {
   opacity: 0;
 
   transition: opacity 0.5s linear;
+}
+
+.sandwichClose {
+  border-bottom: thick solid var(--highlight-color-light);
+}
+
+.sandwichClose > h2 {
+  font-size: 3vh;
+  font-family: var(--body-font);
+  color: var(--text-color-light);
+
+  margin-left: 1vw;
 }
 
 /* dark mode changes */
