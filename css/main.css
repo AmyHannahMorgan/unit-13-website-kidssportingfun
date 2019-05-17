@@ -92,6 +92,11 @@ sandwichNav.open {
 }
 
 .sandwichClose {
+  display: flex;
+  align-items: center;
+
+  min-height: 100px;
+
   border-bottom: thick solid var(--highlight-color-light);
 }
 
@@ -120,5 +125,19 @@ body.dark > header > .sandwichOpen > img.dark {
 @media only screen and (orientation: landscape) {
   header > h1 {
     font-size: 2em
+  }
+
+  sandwichNav {
+    max-width: 500px;
+  }
+
+  .sandwichClose > h2 {
+    font-size: 1.75em;
+  }
+}
+
+@media only screen and (hover: hover) {
+  header > .sandwichOpen {
+    display: none;
   }
 }
