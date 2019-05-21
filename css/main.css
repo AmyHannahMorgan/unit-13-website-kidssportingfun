@@ -128,6 +128,10 @@ body.dark > header > .sandwichOpen > img.dark {
   opacity: 1;
 }
 
+body.dark > sandwichNav {
+ background-color: var(--header-bg-dark); 
+}
+
 /* media queries */
 @media only screen and (orientation: landscape) {
   header > h1 {
