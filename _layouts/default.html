@@ -3,14 +3,37 @@
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{site.baseurl}}/css/main.css">
   </head>
-  <body>
+  <body class="textSize1">
     <header>
-
+      <h1>KidsSportingFun</h1>
+      <div class="sandwichOpen" id="sandwichOpen">
+        <img src="{{ site.baseurl }}/assets/sandwichNav/sandwichNav-light.svg" alt="">
+        <img class="dark" src="{{ site.baseurl }}/assets/sandwichNav/sandwichNav-dark.svg" alt="">
+      </div>
     </header>
+    <sandwichNav>
+      <div class="sandwichClose" id="sandwichClose">
+        <h2>Close</h2>
+      </div>
+      <div class="sandwichBar">
+        <div class="sandwichBarButton">
+          <h2><a href="">Home</a></h2>
+          <img class="sandwichBarArrow" src=""/>
+        </div>
+        <div class="sandwichBarContent">
+          <ul>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+
+    </sandwichNav>
+    <script src="{{ site.baseurl }}/js/sandwichNav.js" charset="utf-8"></script>
 
     {{ content }}
-    
+
     <footer>
 
     </footer>
