@@ -108,6 +108,13 @@ sandwichNav.open {
   margin-left: 1vw;
 }
 
+.sandwichBarButton > h2 > a {
+  font-size: 3vh;
+  font-family: var(--body-font);
+  color: var(--text-color-light);
+  text-decoration: none;
+}
+
 /* dark mode changes */
 body.dark > header {
   background-color: var(--header-bg-dark)
