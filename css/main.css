@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald|Rock+Salt');
 /* root */
 :root {
-  font-size: 3vmax;
+  font-size: 25px;
 }
 /* tags */
 body {
@@ -24,11 +24,19 @@ body {
 body h2 {
   font-family: var(--body-font);
   font-size: 1.33rem;
+
+  margin-left: 1vw;
+  margin-right: 1vw;
 }
 
-body P {
+body p {
   font-family: var(--body-font);
   font-size: 1rem;
+
+  white-space: pre-line;
+
+  margin-left: 1vw;
+  margin-right: 1vw;
 }
 
 header {
@@ -43,6 +51,8 @@ header {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
+  font-size: 25px;
 
   background-color: var(--header-bg-light);
 
@@ -75,7 +85,7 @@ header > .sandwichOpen {
 }
 
 sandwichNav {
-  position: absolute;
+  position: fixed;
   left: -100vw;
   top: 0;
 
@@ -118,7 +128,7 @@ sandwichNav.open {
 }
 
 .sandwichClose > h2 {
-  font-size: 3vh;
+  font-size: 2rem;
   font-family: var(--body-font);
   color: var(--text-color-light);
 
@@ -134,11 +144,17 @@ sandwichNav.open {
 .sandwichBarButton {
   display: flex;
   align-items: center;
+
+  border-bottom: medium solid var(--highlight-color-light);
+
+  transition: var(--border-color-transition);
 }
 
 .sandwichBarButton > h2 {
-  font-size: 3vh;
+  font-size: 2rem;
   font-family: var(--body-font);
+
+  margin: 0.5vh 0;
 
   transition: var(--text-transition);
 }
@@ -146,6 +162,29 @@ sandwichNav.open {
 .sandwichBarButton > h2 > a {
   color: var(--text-color-light);
   text-decoration: none;
+}
+
+.sandwichBarContent {
+  margin-left: 3.125%;
+}
+
+.sandwichBarContent > ul {
+  list-style: none;
+  margin: 0;
+}
+
+.sandwichBarContent > ul > li {
+  display: flex;
+  align-items: center;
+
+  font-family: var(--body-font);
+  font-size: 2rem;
+}
+
+.sandwichBarContent > ul > li > a {
+  text-decoration: none;
+
+  color: var(--text-color-light);
 }
 
 /* dark mode changes */
@@ -177,7 +216,7 @@ body.dark > sandwichNav h2, body.dark > sandwichNav a {
 /* media queries */
 @media only screen and (orientation: landscape) {
   header > h1 {
-    font-size: 1.5rem
+    font-size: 1.5em
   }
 
   sandwichNav {
@@ -187,11 +226,11 @@ body.dark > sandwichNav h2, body.dark > sandwichNav a {
   }
 
   .sandwichClose > h2 {
-    font-size: 1rem;
+    font-size: 1em;
   }
 
   .sandwichBarButton > h2{
-    font-size: 1rem;
+    font-size: 1em;
   }
 }
 
