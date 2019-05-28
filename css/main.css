@@ -1,6 +1,9 @@
 /* fonts */
 @import url('https://fonts.googleapis.com/css?family=Oswald|Rock+Salt');
-
+/* root */
+:root {
+  font-size: 3vmax;
+}
 /* tags */
 body {
   margin: 0;
@@ -11,9 +14,21 @@ body {
   --text-color-light: #0E0F19;
   --text-color-dark: #e9e9ea;
   --highlight-color-light: #2C382E;
+  --highlight-color-dark: #7C9B81;
 
   --bg-transition: background-color 0.5s linear;
   --text-transition: color 0.5s linear;
+  --border-color-transition: border-color 0.5s  linear;
+}
+
+body h2 {
+  font-family: var(--body-font);
+  font-size: 1.33rem;
+}
+
+body P {
+  font-family: var(--body-font);
+  font-size: 1rem;
 }
 
 header {
@@ -98,6 +113,8 @@ sandwichNav.open {
   min-height: 100px;
 
   border-bottom: thick solid var(--highlight-color-light);
+
+  transition: var(--border-color-transition);
 }
 
 .sandwichClose > h2 {
@@ -106,17 +123,29 @@ sandwichNav.open {
   color: var(--text-color-light);
 
   margin-left: 1vw;
-  
+
+  transition: var(--text-transition);
+}
+
+.sandwichBar {
+  margin-left: 1vw;
+}
+
+.sandwichBarButton {
+  display: flex;
+  align-items: center;
+}
+
+.sandwichBarButton > h2 {
+  font-size: 3vh;
+  font-family: var(--body-font);
+
   transition: var(--text-transition);
 }
 
 .sandwichBarButton > h2 > a {
-  font-size: 3vh;
-  font-family: var(--body-font);
   color: var(--text-color-light);
   text-decoration: none;
-  
-  transition: var(--text-transition);
 }
 
 /* dark mode changes */
@@ -133,11 +162,12 @@ body.dark > header > .sandwichOpen > img.dark {
 }
 
 body.dark > sandwichNav {
- background-color: var(--header-bg-dark); 
+ background-color: var(--header-bg-dark);
 }
 
 body.dark > sandwichNav > .sandwichClose {
   /* put border color change here*/
+  border-color: var(--highlight-color-dark)
 }
 
 body.dark > sandwichNav h2, body.dark > sandwichNav a {
@@ -147,20 +177,30 @@ body.dark > sandwichNav h2, body.dark > sandwichNav a {
 /* media queries */
 @media only screen and (orientation: landscape) {
   header > h1 {
-    font-size: 2em
+    font-size: 1.5rem
   }
 
   sandwichNav {
     max-width: 500px;
+
+    box-shadow: 10px 0px 50px 0px black;
   }
 
   .sandwichClose > h2 {
-    font-size: 1.75em;
+    font-size: 1rem;
+  }
+
+  .sandwichBarButton > h2{
+    font-size: 1rem;
   }
 }
 
 @media only screen and (hover: hover) {
   header > .sandwichOpen {
+    display: none;
+  }
+
+  sandwichNav {
     display: none;
   }
 }
