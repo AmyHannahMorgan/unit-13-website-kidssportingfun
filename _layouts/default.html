@@ -13,6 +13,10 @@
           <img src="{{ site.baseurl }}/assets/sandwichNav/sandwichNav-light.svg" alt="">
           <img class="dark" src="{{ site.baseurl }}/assets/sandwichNav/sandwichNav-dark.svg" alt="">
         </div>
+        <div class="accessOpen" id="accessOpen">
+          <img src="{{ site.baseurl }}/assets/accessibility/gear-light.svg" alt="">
+          <img class="dark" src="{{ site.baseurl }}/assets/accessibility/gear-dark.svg" alt="">
+        </div>
       </div>
       <nav>
         <div class="dropdown">
@@ -102,7 +106,30 @@
       </div>
 
     </sandwichNav>
+    <div class="access" id="access">
+      <div class="sandwichClose" id="accessClose">
+        <h2>Close</h2>
+      </div>
+      <h2>Text Size</h2>
+      <h2>Dark Mode</h2>
+      <div class="darkModeMenu">
+        <div class="lightModeIcon">
+          <img src="{{ site.baseurl }}/assets/accessibility/day-mode-light.svg" alt="">
+          <img class="dark" src="{{ site.baseurl }}/assets/accessibility/day-mode-dark.svg" alt="">
+        </div>
+        <div class="selector" id="darkModeToggle">
+          <div class="toggle">
+
+          </div>
+        </div>
+        <div class="darkModeIcon">
+          <img src="{{ site.baseurl }}/assets/accessibility/night-mode-light.svg" alt="">
+          <img class="dark" src="{{ site.baseurl }}/assets/accessibility/night-mode-dark.svg" alt="">
+        </div>
+      </div>
+    </div>
     <script src="{{ site.baseurl }}/js/sandwichNav.js" charset="utf-8"></script>
+    <script src="{{ site.baseurl }}/js/accessibility.js" charset="utf-8"></script>
 
     {{ content }}
 
