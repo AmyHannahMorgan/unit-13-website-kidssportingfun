@@ -20,18 +20,53 @@
       <div class="sandwichBar">
         <div class="sandwichBarButton">
           <h2><a href="">Home</a></h2>
-          <img class="sandwichBarArrow" src=""/>
+          <div class="sandwichBarArrow">
+            <img src="{{ site.baseurl }}/assets/sandwichNav/sandwichNav-arrow-light.svg" class="sandwichBarArrow">
+            <img src="{{ site.baseurl }}/assets/sandwichNav/sandwichNav-arrow-dark.svg" class="sandwichBarArrow dark">
+          </div>
         </div>
         <div class="sandwichBarContent">
           <ul>
-            <li><a href>test</a></li>
-            <li><a href>test</a></li>
-            <li><a href>test</a></li>
+            <li><a href>About Us</a></li>
+            <li><a href>What We Do</a></li>
           </ul>
+        </div>
+      </div>
+      <div class="sandwichBar">
+        <div class="sandwichBarButton">
+          <h2><a href="">Activities</a></h2>
+          <div class="sandwichBarArrow">
+            <img src="{{ site.baseurl }}/assets/sandwichNav/sandwichNav-arrow-light.svg" class="sandwichBarArrow">
+            <img src="{{ site.baseurl }}/assets/sandwichNav/sandwichNav-arrow-dark.svg" class="sandwichBarArrow dark">
+          </div>
+        </div>
+        <div class="sandwichBarContent">
+          <ul>
+            <li><a href="">6-8</a></li>
+            <li><a href="">8-10</a></li>
+            <li><a href="">10-12</a></li>
+            <li><a href="">12-14</a></li>
+            <li><a href="">14+</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="sandwichBar">
+        <div class="sandwichBarButton">
+          <h2><a href="">Volunteering</a></h2>
         </div>
       </div>
 
     </sandwichNav>
+    <nav>
+      <div class="dropdown">
+        <div class="dropdownHover">
+
+        </div>
+        <div class="dropdownContent">
+
+        </div>
+      </div>
+    </nav>
     <script src="{{ site.baseurl }}/js/sandwichNav.js" charset="utf-8"></script>
 
     {{ content }}
