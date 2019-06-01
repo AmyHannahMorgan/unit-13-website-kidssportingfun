@@ -104,13 +104,52 @@
           <h2><a href="">Volunteering</a></h2>
         </div>
       </div>
-
     </sandwichNav>
     <div class="access" id="access">
       <div class="sandwichClose" id="accessClose">
         <h2>Close</h2>
       </div>
       <h2>Text Size</h2>
+      <div class="textSizeSelector" font-size="25px" id="defaultTextSize">
+        <p>text size 1</p>
+        <div class="selector">
+          <div class="toggle">
+
+          </div>
+        </div>
+      </div>
+      <div class="textSizeSelector" font-size="30px">
+        <p>text size 2</p>
+        <div class="selector">
+          <div class="toggle">
+
+          </div>
+        </div>
+      </div>
+      <div class="textSizeSelector" font-size="35px">
+        <p>text size 3</p>
+        <div class="selector">
+          <div class="toggle">
+
+          </div>
+        </div>
+      </div>
+      <div class="textSizeSelector" font-size="40px">
+        <p>text size 4</p>
+        <div class="selector">
+          <div class="toggle">
+
+          </div>
+        </div>
+      </div>
+      <div class="textSizeSelector" font-size="45px">
+        <p>text size 5</p>
+        <div class="selector">
+          <div class="toggle">
+
+          </div>
+        </div>
+      </div>
       <h2>Dark Mode</h2>
       <div class="darkModeMenu">
         <div class="lightModeIcon">
@@ -131,7 +170,9 @@
     <script src="{{ site.baseurl }}/js/sandwichNav.js" charset="utf-8"></script>
     <script src="{{ site.baseurl }}/js/accessibility.js" charset="utf-8"></script>
 
-    {{ content }}
+    <div class="contentContainer">
+      {{ content }}
+    </div>
 
     <footer>
 
