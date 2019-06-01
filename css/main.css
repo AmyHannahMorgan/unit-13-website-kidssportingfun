@@ -144,6 +144,9 @@ sandwichNav.open {
 .sandwichBarButton {
   display: flex;
   align-items: center;
+  min-height: 100px;
+
+  position: relative;
 
   border-bottom: medium solid var(--highlight-color-light);
 
@@ -154,9 +157,35 @@ sandwichNav.open {
   font-size: 2rem;
   font-family: var(--body-font);
 
-  margin: 0.5vh 0;
+  margin-left: 0.5vh;
 
   transition: var(--text-transition);
+}
+
+.sandwichBarButton > div.sandwichBarArrow {
+  position: absolute;
+  right: 2vw;
+
+  display: flex;
+  align-items: center;
+
+  height: 100%;
+
+  width: 2rem;
+
+  transition: transform 0.25s ease
+}
+
+.sandwichBarButton > div.sandwichBarArrow.rotate {
+  transform: rotate(90deg);
+}
+
+.sandwichBarButton > div.sandwichBarArrow > img{
+  position: absolute;
+}
+
+.sandwichBarButton > div.sandwichBarArrow > img.dark {
+  display: none;
 }
 
 .sandwichBarButton > h2 > a {
@@ -165,7 +194,12 @@ sandwichNav.open {
 }
 
 .sandwichBarContent {
+  height: 0px;
+
   margin-left: 3.125%;
+  overflow: hidden;
+
+  transition: height 0.25s ease;
 }
 
 .sandwichBarContent > ul {
@@ -183,8 +217,15 @@ sandwichNav.open {
 
 .sandwichBarContent > ul > li > a {
   text-decoration: none;
+  width: 100%;
 
   color: var(--text-color-light);
+
+  border-bottom: thin solid var(--highlight-color-light);
+}
+
+.sandwichBarContent > ul > li:last-of-type > a {
+  border-bottom: none;
 }
 
 /* dark mode changes */
