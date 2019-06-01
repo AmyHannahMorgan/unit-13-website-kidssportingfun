@@ -1,8 +1,13 @@
 /* fonts */
 @import url('https://fonts.googleapis.com/css?family=Oswald|Rock+Salt');
+
+/* HTML */
+html {
+  --font-size: 25px
+}
 /* root */
 :root {
-  font-size: 25px;
+  font-size: var(--font-size);
 }
 /* tags */
 body {
@@ -24,7 +29,7 @@ body {
 
 body h2 {
   font-family: var(--body-font);
-  font-size: 1.33rem;
+  font-size: 2rem;
 
   margin-left: 1vw;
   margin-right: 1vw;
@@ -34,7 +39,7 @@ body h2 {
 
 body p {
   font-family: var(--body-font);
-  font-size: 1rem;
+  font-size: 1.25rem;
 
   white-space: pre-line;
 
@@ -196,12 +201,13 @@ sandwichNav {
 
   width: 100vw;
   min-height: 100vh;
+  max-height: 100vh;
 
   background-color: var(--header-bg-light);
 
   transition: left 0.25s ease, var(--bg-transition);
 
-  overflow-x: scroll;
+  overflow-y: scroll;
 }
 
 sandwichNav.open {
@@ -348,6 +354,8 @@ sandwichNav.open {
   background-color: var(--header-bg-light);
 
   transition: right 0.25s ease, var(--bg-transition);
+
+  overflow-y: scroll;
 }
 
 .access.open {
@@ -360,6 +368,52 @@ sandwichNav.open {
   width: 100%;
 
   border-bottom: medium solid var(--highlight-color-light);
+}
+
+.textSizeSelector {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  font-size: 25px
+}
+
+.textSizeSelector > .selector {
+  position: absolute;
+  right: 0;
+
+  width: 6em;
+  height: 3em;
+
+  margin-right: 2em;
+
+  background-color: white;
+  border: thin solid transparent;
+  border-radius: calc(3em / 2);
+
+  transition: var(--bg-transition);
+}
+
+.textSizeSelector > .selector.toggle {
+  background-color: limegreen;
+}
+
+.textSizeSelector > .selector > .toggle {
+  position: absolute;
+  left: 0;
+
+  width: 3em;
+  height: 3em;
+
+  background-color: var(--highlight-color-light);
+  border: thin solid transparent;
+  border-radius: calc(3em / 2);
+
+  transition: left 0.125s ease, right 0.125s ease, var(--bg-transition);
+}
+
+.textSizeSelector > .selector.toggle > .toggle {
+  left: calc(100% - 3em);
 }
 
 .darkModeMenu {
@@ -516,7 +570,7 @@ body.dark > header > nav > .dropdown > .dropdownHover {
 /* media queries */
 @media only screen and (orientation: landscape) {
   header > h1 {
-    font-size: 1.5rem
+    font-size: 1.75rem
   }
 
   sandwichNav {
@@ -535,6 +589,18 @@ body.dark > header > nav > .dropdown > .dropdownHover {
 
   .sandwichBarContent > ul > li > a {
     font-size: 1.33rem;
+  }
+
+  .access > h2 {
+    font-size: 1.33rem;
+  }
+
+  body h2 {
+    font-size: 1.33rem;
+  }
+
+  body p {
+    font-size: 1rem;
   }
 }
 
