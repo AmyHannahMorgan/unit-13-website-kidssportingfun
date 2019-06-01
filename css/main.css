@@ -44,6 +44,14 @@ header {
   top: 0;
   left: 0;
 
+  font-size: 25px;
+
+  background-color: var(--header-bg-light);
+
+  transition: var(--bg-transition);
+}
+
+header > .pageTitle {
   display: flex;
   width: 100vw;
   height: 10vh;
@@ -52,14 +60,10 @@ header {
   justify-content: center;
   align-items: center;
 
-  font-size: 25px;
-
-  background-color: var(--header-bg-light);
-
-  transition: var(--bg-transition);
+  border-bottom: medium solid var(--highlight-color-light);
 }
 
-header > h1 {
+header > .pageTitle > h1 {
   color: var(--text-color-light);
 
   font-size: 3vh;
@@ -68,7 +72,7 @@ header > h1 {
   transition: var(--text-transition);
 }
 
-header > .sandwichOpen {
+header > .pageTitle > .sandwichOpen {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -82,6 +86,82 @@ header > .sandwichOpen {
   position: absolute;
   left: 0;
   top: 0;
+}
+
+header > nav {
+  display: table;
+  table-layout: fixed;
+  width: 100vw;
+  height: 2.5vh;
+
+  position: relative;
+}
+
+header > nav > .dropdown {
+  display: table-cell;
+}
+
+header > nav > .dropdown > .dropdownHover {
+  display: flex;
+  justify-content: center;
+
+  border-right: thin solid var(--highlight-color-light);
+  border-bottom: medium solid var(--highlight-color-light);
+}
+
+header > nav > .dropdown:last-of-type > .dropdownHover {
+  border-right: none;
+}
+
+header > nav > .dropdown > .dropdownHover > p {
+  margin: 5px;
+}
+
+header > nav > .dropdown > .dropdownHover > p > a {
+  text-decoration: none;
+  color: var(--text-color-light);
+}
+
+header > nav > .dropdown > .dropdownContent {
+  position: absolute;
+  left: 0;
+
+  width: 100vw;
+  max-height: 5rem;
+
+  transform: scaleY(0);
+  transform-origin: top;
+
+  overflow: hidden;
+
+  background-color: var(--header-bg-light);
+
+  transition: transform 0.125s ease;
+}
+
+header > nav > .dropdown:hover > .dropdownContent {
+  transform: scaleY(1);
+}
+
+header > nav > .dropdown > .dropdownContent > ul {
+  display: flex;
+  flex-flow: column wrap;
+
+  margin: 0;
+  overflow: hidden;
+
+  height: 100%;
+  max-height: 5rem;
+  width: 100%;
+
+  list-style: none;
+}
+
+header > nav > .dropdown > .dropdownContent > ul > li > a {
+  font-size: 1rem;
+  font-family: var(--body-font);
+  color: var(--text-color-light);
+  text-decoration: none;
 }
 
 sandwichNav {
@@ -233,11 +313,11 @@ body.dark > header {
   background-color: var(--header-bg-dark)
 }
 
-body.dark > header > h1 {
+body.dark > header > .pageTitle > h1 {
   color: var(--text-color-dark);
 }
 
-body.dark > header > .sandwichOpen > img.dark {
+body.dark > header > .pageTitle > .sandwichOpen > img.dark {
   opacity: 1;
 }
 
@@ -276,7 +356,7 @@ body.dark > sandwichNav h2, body.dark > sandwichNav a {
 }
 
 @media only screen and (hover: hover) {
-  header > .sandwichOpen {
+  header > .pageTitle > .sandwichOpen {
     display: none;
   }
 
