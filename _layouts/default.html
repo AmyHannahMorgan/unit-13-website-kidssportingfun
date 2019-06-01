@@ -7,11 +7,56 @@
   </head>
   <body class="textSize1">
     <header>
-      <h1>KidsSportingFun</h1>
-      <div class="sandwichOpen" id="sandwichOpen">
-        <img src="{{ site.baseurl }}/assets/sandwichNav/sandwichNav-light.svg" alt="">
-        <img class="dark" src="{{ site.baseurl }}/assets/sandwichNav/sandwichNav-dark.svg" alt="">
+      <div class="pageTitle">
+        <h1>KidsSportingFun</h1>
+        <div class="sandwichOpen" id="sandwichOpen">
+          <img src="{{ site.baseurl }}/assets/sandwichNav/sandwichNav-light.svg" alt="">
+          <img class="dark" src="{{ site.baseurl }}/assets/sandwichNav/sandwichNav-dark.svg" alt="">
+        </div>
       </div>
+      <nav>
+        <div class="dropdown">
+          <div class="dropdownHover">
+            <p><a href="">Home</a></p>
+          </div>
+          <div class="dropdownContent">
+            <ul>
+              <li><a href="">About Us</a></li>
+              <li><a href="">What we do</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="dropdown">
+          <div class="dropdownHover">
+            <p><a href="">Activities</a></p>
+          </div>
+          <div class="dropdownContent">
+            <ul>
+              <li><a href="">6-8</a></li>
+              <li><a href="">8-10</a></li>
+              <li><a href="">10-12</a></li>
+              <li><a href="">12-14</a></li>
+              <li><a href="">14+</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="dropdown">
+          <div class="dropdownHover">
+            <p><a href="">Volunteering</a></p>
+          </div>
+          <div class="dropdownContent">
+
+          </div>
+        </div>
+        <div class="dropdown">
+          <div class="dropdownHover">
+            <p><a href="">Donations</a></p>
+          </div>
+          <div class="dropdownContent">
+
+          </div>
+        </div>
+      </nav>
     </header>
     <sandwichNav>
       <div class="sandwichClose" id="sandwichClose">
@@ -57,16 +102,6 @@
       </div>
 
     </sandwichNav>
-    <nav>
-      <div class="dropdown">
-        <div class="dropdownHover">
-
-        </div>
-        <div class="dropdownContent">
-
-        </div>
-      </div>
-    </nav>
     <script src="{{ site.baseurl }}/js/sandwichNav.js" charset="utf-8"></script>
 
     {{ content }}
