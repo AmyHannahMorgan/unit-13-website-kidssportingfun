@@ -16,9 +16,10 @@ body {
   --highlight-color-light: #2C382E;
   --highlight-color-dark: #7C9B81;
 
-  --bg-transition: background-color 0.5s linear;
-  --text-transition: color 0.5s linear;
-  --border-color-transition: border-color 0.5s  linear;
+  --bg-transition: background-color 0.125s linear;
+  --text-transition: color 0.125s linear;
+  --border-color-transition: border-color 0.125s  linear;
+  --icon-transition: opacity 0.125s linear;
 }
 
 body h2 {
@@ -27,6 +28,8 @@ body h2 {
 
   margin-left: 1vw;
   margin-right: 1vw;
+
+  transition: var(--text-transition);
 }
 
 body p {
@@ -37,6 +40,8 @@ body p {
 
   margin-left: 1vw;
   margin-right: 1vw;
+
+  transition: var(--text-transition);
 }
 
 header {
@@ -61,6 +66,8 @@ header > .pageTitle {
   align-items: center;
 
   border-bottom: medium solid var(--highlight-color-light);
+
+  transition: var(--border-color-transition);
 }
 
 header > .pageTitle > h1 {
@@ -123,6 +130,8 @@ header > nav > .dropdown > .dropdownHover {
 
   border-right: thin solid var(--highlight-color-light);
   border-bottom: medium solid var(--highlight-color-light);
+
+  transition: var(--border-color-transition);
 }
 
 header > nav > .dropdown:last-of-type > .dropdownHover {
@@ -152,7 +161,7 @@ header > nav > .dropdown > .dropdownContent {
 
   background-color: var(--header-bg-light);
 
-  transition: transform 0.125s ease;
+  transition: transform 0.125s ease, var(--bg-transition);
 }
 
 header > nav > .dropdown:hover > .dropdownContent {
@@ -186,11 +195,13 @@ sandwichNav {
   top: 0;
 
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
 
   background-color: var(--header-bg-light);
 
   transition: left 0.25s ease, var(--bg-transition);
+
+  overflow-x: scroll;
 }
 
 sandwichNav.open {
@@ -209,7 +220,7 @@ sandwichNav.open {
 
   opacity: 0;
 
-  transition: opacity 0.5s linear;
+  transition: var(--icon-transition);
 }
 
 .sandwichClose {
@@ -281,7 +292,7 @@ sandwichNav.open {
 }
 
 .sandwichBarButton > div.sandwichBarArrow > img.dark {
-  display: none;
+  opacity: 0;
 }
 
 .sandwichBarButton > h2 > a {
@@ -314,6 +325,8 @@ sandwichNav.open {
 .sandwichBarContent > ul > li > a {
   text-decoration: none;
   width: 100%;
+
+  font-size: 2rem;
 
   color: var(--text-color-light);
 
@@ -388,7 +401,7 @@ sandwichNav.open {
   position: absolute;
   left: 0;
 
-  transition: left 0.125s ease, right 0.125s ease;
+  transition: left 0.125s ease, right 0.125s ease, var(--bg-transition);
 }
 
 .darkModeMenu > .selector.toggle > .toggle {
@@ -402,25 +415,65 @@ sandwichNav.open {
   height: 4rem;
 }
 
-.darkModeMenu > .lightModeIcon > img, .darkModeMenu > .darkModeIcon > img {
+.darkModeMenu > .lightModeIcon > img,
+.darkModeMenu > .darkModeIcon > img {
   position: absolute;
 }
 
-.darkModeMenu > .lightModeIcon > img.dark, .darkModeMenu > .darkModeIcon > img.dark {
-  display: none;
+.darkModeMenu > .lightModeIcon > img.dark,
+.darkModeMenu > .darkModeIcon > img.dark {
+  opacity: 0;
+
+  transition: var(--icon-transition);
 }
 
 /* dark mode changes */
+body.dark {
+  background-color: var(--text-color-light);
+}
+
+body.dark * {
+  color: var(--text-color-dark);
+}
+
 body.dark > header {
-  background-color: var(--header-bg-dark)
+  background-color: var(--header-bg-dark);
+}
+
+body.dark > header > .pageTitle {
+  border-color: var(--highlight-color-dark);
 }
 
 body.dark > header > .pageTitle > h1 {
   color: var(--text-color-dark);
 }
 
-body.dark > header > .pageTitle > .sandwichOpen > img.dark {
+/* body.dark > header > .pageTitle > .sandwichOpen > img.dark, body.dark > header > .pageTitle > .accessOpen > img.dark {
   opacity: 1;
+} */
+
+body.dark > .access {
+  background-color: var(--header-bg-dark);
+}
+
+body.dark > .access * {
+  color: var(--text-color-dark);
+}
+
+body.dark > .access h2 {
+  border-color: var(--highlight-color-dark);
+}
+
+body.dark > .access > .sandwichClose {
+  border-color: var(--highlight-color-dark)
+}
+
+/* body.dark > .access > .darkModeMenu > .lightModeIcon > img.dark, body.dark > .access > .darkModeMenu > .darkModeIcon > img.dark {
+  opacity: 1;
+} */
+
+body.dark > .access > .darkModeMenu > .selector > .toggle {
+  background-color: var(--highlight-color-dark);
 }
 
 body.dark > sandwichNav {
@@ -428,7 +481,6 @@ body.dark > sandwichNav {
 }
 
 body.dark > sandwichNav > .sandwichClose {
-  /* put border color change here*/
   border-color: var(--highlight-color-dark)
 }
 
@@ -436,10 +488,35 @@ body.dark > sandwichNav h2, body.dark > sandwichNav a {
   color: var(--text-color-dark);
 }
 
+body.dark > sandwichNav > .sandwichBar > .sandwichBarButton {
+  border-color: var(--highlight-color-dark);
+}
+
+body.dark > sandwichNav > .sandwichBar > .sandwichBarContent > ul > li > a {
+  border-color: var(--highlight-color-dark);
+}
+
+body.dark img.dark {
+  opacity: 1 !important;
+}
+
+body.dark > header > nav > .dropdown > .dropdownHover > p > a,
+body.dark > header > nav > .dropdown > .dropdownContent > ul > li > a {
+  color: var(--text-color-dark);
+}
+
+body.dark > header > nav > .dropdown > .dropdownContent {
+  background-color: var(--header-bg-dark);
+}
+
+body.dark > header > nav > .dropdown > .dropdownHover {
+  border-color: var(--highlight-color-dark);
+}
+
 /* media queries */
 @media only screen and (orientation: landscape) {
   header > h1 {
-    font-size: 1.5em
+    font-size: 1.5rem
   }
 
   sandwichNav {
@@ -449,11 +526,15 @@ body.dark > sandwichNav h2, body.dark > sandwichNav a {
   }
 
   .sandwichClose > h2 {
-    font-size: 1em;
+    font-size: 1.33rem;
   }
 
   .sandwichBarButton > h2{
-    font-size: 1em;
+    font-size: 1.33rem;
+  }
+
+  .sandwichBarContent > ul > li > a {
+    font-size: 1.33rem;
   }
 }
 
