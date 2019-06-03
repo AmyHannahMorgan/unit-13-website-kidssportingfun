@@ -7,11 +7,60 @@
   </head>
   <body class="textSize1">
     <header>
-      <h1>KidsSportingFun</h1>
-      <div class="sandwichOpen" id="sandwichOpen">
-        <img src="{{ site.baseurl }}/assets/sandwichNav/sandwichNav-light.svg" alt="">
-        <img class="dark" src="{{ site.baseurl }}/assets/sandwichNav/sandwichNav-dark.svg" alt="">
+      <div class="pageTitle">
+        <h1>KidsSportingFun</h1>
+        <div class="sandwichOpen" id="sandwichOpen">
+          <img src="{{ site.baseurl }}/assets/sandwichNav/sandwichNav-light.svg" alt="">
+          <img class="dark" src="{{ site.baseurl }}/assets/sandwichNav/sandwichNav-dark.svg" alt="">
+        </div>
+        <div class="accessOpen" id="accessOpen">
+          <img src="{{ site.baseurl }}/assets/accessibility/gear-light.svg" alt="">
+          <img class="dark" src="{{ site.baseurl }}/assets/accessibility/gear-dark.svg" alt="">
+        </div>
       </div>
+      <nav>
+        <div class="dropdown">
+          <div class="dropdownHover">
+            <p><a href="">Home</a></p>
+          </div>
+          <div class="dropdownContent">
+            <ul>
+              <li><a href="">About Us</a></li>
+              <li><a href="">What we do</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="dropdown">
+          <div class="dropdownHover">
+            <p><a href="">Activities</a></p>
+          </div>
+          <div class="dropdownContent">
+            <ul>
+              <li><a href="">6-8</a></li>
+              <li><a href="">8-10</a></li>
+              <li><a href="">10-12</a></li>
+              <li><a href="">12-14</a></li>
+              <li><a href="">14+</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="dropdown">
+          <div class="dropdownHover">
+            <p><a href="">Volunteering</a></p>
+          </div>
+          <div class="dropdownContent">
+
+          </div>
+        </div>
+        <div class="dropdown">
+          <div class="dropdownHover">
+            <p><a href="">Donations</a></p>
+          </div>
+          <div class="dropdownContent">
+
+          </div>
+        </div>
+      </nav>
     </header>
     <sandwichNav>
       <div class="sandwichClose" id="sandwichClose">
@@ -20,19 +69,110 @@
       <div class="sandwichBar">
         <div class="sandwichBarButton">
           <h2><a href="">Home</a></h2>
-          <img class="sandwichBarArrow" src=""/>
+          <div class="sandwichBarArrow">
+            <img src="{{ site.baseurl }}/assets/sandwichNav/sandwichNav-arrow-light.svg" class="sandwichBarArrow">
+            <img src="{{ site.baseurl }}/assets/sandwichNav/sandwichNav-arrow-dark.svg" class="sandwichBarArrow dark">
+          </div>
         </div>
         <div class="sandwichBarContent">
           <ul>
-            <li></li>
+            <li><a href>About Us</a></li>
+            <li><a href>What We Do</a></li>
           </ul>
         </div>
       </div>
-
+      <div class="sandwichBar">
+        <div class="sandwichBarButton">
+          <h2><a href="">Activities</a></h2>
+          <div class="sandwichBarArrow">
+            <img src="{{ site.baseurl }}/assets/sandwichNav/sandwichNav-arrow-light.svg" class="sandwichBarArrow">
+            <img src="{{ site.baseurl }}/assets/sandwichNav/sandwichNav-arrow-dark.svg" class="sandwichBarArrow dark">
+          </div>
+        </div>
+        <div class="sandwichBarContent">
+          <ul>
+            <li><a href="">6-8</a></li>
+            <li><a href="">8-10</a></li>
+            <li><a href="">10-12</a></li>
+            <li><a href="">12-14</a></li>
+            <li><a href="">14+</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="sandwichBar">
+        <div class="sandwichBarButton">
+          <h2><a href="">Volunteering</a></h2>
+        </div>
+      </div>
     </sandwichNav>
-    <script src="{{ site.baseurl }}/js/sandwichNav.js" charset="utf-8"></script>
+    <div class="access" id="access">
+      <div class="sandwichClose" id="accessClose">
+        <h2>Close</h2>
+      </div>
+      <h2>Text Size</h2>
+      <div class="textSizeSelector" font-size="25px" id="defaultTextSize">
+        <p>text size 1</p>
+        <div class="selector">
+          <div class="toggle">
 
-    {{ content }}
+          </div>
+        </div>
+      </div>
+      <div class="textSizeSelector" font-size="30px">
+        <p>text size 2</p>
+        <div class="selector">
+          <div class="toggle">
+
+          </div>
+        </div>
+      </div>
+      <div class="textSizeSelector" font-size="35px">
+        <p>text size 3</p>
+        <div class="selector">
+          <div class="toggle">
+
+          </div>
+        </div>
+      </div>
+      <div class="textSizeSelector" font-size="40px">
+        <p>text size 4</p>
+        <div class="selector">
+          <div class="toggle">
+
+          </div>
+        </div>
+      </div>
+      <div class="textSizeSelector" font-size="45px">
+        <p>text size 5</p>
+        <div class="selector">
+          <div class="toggle">
+
+          </div>
+        </div>
+      </div>
+      <h2>Dark Mode</h2>
+      <div class="darkModeMenu">
+        <div class="lightModeIcon">
+          <img src="{{ site.baseurl }}/assets/accessibility/day-mode-light.svg" alt="">
+          <img class="dark" src="{{ site.baseurl }}/assets/accessibility/day-mode-dark.svg" alt="">
+        </div>
+        <div class="selector" id="darkModeToggle">
+          <div class="toggle">
+
+          </div>
+        </div>
+        <div class="darkModeIcon">
+          <img src="{{ site.baseurl }}/assets/accessibility/night-mode-light.svg" alt="">
+          <img class="dark" src="{{ site.baseurl }}/assets/accessibility/night-mode-dark.svg" alt="">
+        </div>
+      </div>
+    </div>
+    <script src="{{ site.baseurl }}/js/sandwichNav.js" charset="utf-8"></script>
+    <script src="{{ site.baseurl }}/js/accessibility.js" charset="utf-8"></script>
+
+    <div class="contentContainer">
+      {{ content }}
+    </div>
 
     <footer>
 
