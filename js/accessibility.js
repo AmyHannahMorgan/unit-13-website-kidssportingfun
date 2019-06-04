@@ -41,7 +41,7 @@ function TextSizeSelectorHandler(element) {
     this.changeTextSize();
   });
 
-  this.element.querySelector('p').style.setProperty = this.size;
+  this.element.querySelector('p').style.fontSize = this.size;
 
   this.changeTextSize = () => {
     try {
