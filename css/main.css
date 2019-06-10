@@ -58,7 +58,7 @@ body ul {
   transition: var(--text-transition);
 }
 
-body > ul li {
+body ul li {
   margin-top: -1em;
 }
 
