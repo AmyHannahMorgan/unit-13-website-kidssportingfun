@@ -58,6 +58,10 @@ body ul {
   transition: var(--text-transition);
 }
 
+body > ul li {
+  margin-top: 1em;
+}
+
 header {
   position: sticky;
   top: 0;
