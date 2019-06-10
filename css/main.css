@@ -59,7 +59,7 @@ body ul {
 }
 
 body > ul li {
-  margin-top: 1em;
+  margin-top: -1em;
 }
 
 header {
