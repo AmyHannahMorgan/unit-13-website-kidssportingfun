@@ -62,6 +62,22 @@ body > ul li {
   margin-top: -1em;
 }
 
+body form {
+  margin: 0 1vw;
+
+  padding-bottom: 50px;
+}
+
+body form p {
+  display: inline-block;
+  font-size: 1.5rem;
+}
+
+body form input {
+  font-size: 1.5rem;
+  color: var(--text-color-light) !important;
+}
+
 header {
   position: sticky;
   top: 0;
@@ -679,6 +695,14 @@ body.dark > header > nav > .dropdown > .dropdownHover {
     font-size: 1rem;
   }
 
+  body form p {
+    font-size: 1rem;
+  }
+
+  body form input {
+    font-size: 1rem;
+  }
+
   .buttonContainer {
     flex-direction: row;
     flex-wrap: wrap;
@@ -714,7 +738,7 @@ body.dark > header > nav > .dropdown > .dropdownHover {
 }
 
 @media only screen and (min-width: 1000px){
-  body h2, body p, body ul {
+  body h2, body p, body ul, body form {
     width: 75vw;
     margin-left: auto;
     margin-right: auto;
