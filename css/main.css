@@ -49,6 +49,19 @@ body p {
   transition: var(--text-transition);
 }
 
+body ul {
+  font-family: var(--body-font);
+  font-size: 1.25rem;
+  
+  white-space: pre-line;
+  
+  transition: var(--text-transition);
+}
+
+body > ul li {
+  margin-top: -1em;
+}
+
 header {
   position: sticky;
   top: 0;
@@ -601,6 +614,10 @@ body.dark > header > nav > .dropdown > .dropdownHover {
   }
 
   body p {
+    font-size: 1rem;
+  }
+  
+  body ul {
     font-size: 1rem;
   }
 }

@@ -8,7 +8,7 @@
   <body class="textSize1">
     <header>
       <div class="pageTitle">
-        <h1>KidsSportingFun</h1>
+        <h1>KidsSportingLife</h1>
         <div class="sandwichOpen" id="sandwichOpen">
           <img src="{{ site.baseurl }}/assets/sandwichNav/sandwichNav-light.svg" alt="">
           <img class="dark" src="{{ site.baseurl }}/assets/sandwichNav/sandwichNav-dark.svg" alt="">
@@ -21,32 +21,32 @@
       <nav>
         <div class="dropdown">
           <div class="dropdownHover">
-            <p><a href="">Home</a></p>
+            <p><a href="{{ site.baseurl }}">Home</a></p>
           </div>
           <div class="dropdownContent">
             <ul>
-              <li><a href="">About Us</a></li>
-              <li><a href="">What we do</a></li>
+              <li><a href="{{ site.baseurl }}/#aboutus">About Us</a></li>
+              <li><a href="{{ site.baseurl }}/#who">Who We Are</a></li>
             </ul>
           </div>
         </div>
         <div class="dropdown">
           <div class="dropdownHover">
-            <p><a href="">Activities</a></p>
+            <p><a href="{{ site.baseurl }}/activities">Activities</a></p>
           </div>
           <div class="dropdownContent">
             <ul>
-              <li><a href="">6-8</a></li>
-              <li><a href="">8-10</a></li>
-              <li><a href="">10-12</a></li>
-              <li><a href="">12-14</a></li>
-              <li><a href="">14+</a></li>
+              <li><a href="{{ site.baseurl }}/activities/6-8">6-8</a></li>
+              <li><a href="{{ site.baseurl }}/activities/8-10">8-10</a></li>
+              <li><a href="{{ site.baseurl }}/activities/10-12">10-12</a></li>
+              <li><a href="{{ site.baseurl }}/activities/12-14">12-14</a></li>
+              <li><a href="{{ site.baseurl }}/activities/14+">14+</a></li>
             </ul>
           </div>
         </div>
         <div class="dropdown">
           <div class="dropdownHover">
-            <p><a href="">Volunteering</a></p>
+            <p><a href="{{ site.baseurl }}/volunteering">Volunteering</a></p>
           </div>
           <div class="dropdownContent">
 
@@ -54,7 +54,7 @@
         </div>
         <div class="dropdown">
           <div class="dropdownHover">
-            <p><a href="">Donations</a></p>
+            <p><a href="{{ site.baseurl }}/donations">Donations</a></p>
           </div>
           <div class="dropdownContent">
 
@@ -68,7 +68,7 @@
       </div>
       <div class="sandwichBar">
         <div class="sandwichBarButton">
-          <h2><a href="">Home</a></h2>
+          <h2><a href="{{ site.baseurl }}">Home</a></h2>
           <div class="sandwichBarArrow">
             <img src="{{ site.baseurl }}/assets/sandwichNav/sandwichNav-arrow-light.svg" class="sandwichBarArrow">
             <img src="{{ site.baseurl }}/assets/sandwichNav/sandwichNav-arrow-dark.svg" class="sandwichBarArrow dark">
@@ -76,14 +76,14 @@
         </div>
         <div class="sandwichBarContent">
           <ul>
-            <li><a href>About Us</a></li>
-            <li><a href>What We Do</a></li>
+            <li><a href="{{ site.baseurl }}/#aboutus">About Us</a></li>
+            <li><a href="{{ site.baseurl }}/#who">Who We Are</a></li>
           </ul>
         </div>
       </div>
       <div class="sandwichBar">
         <div class="sandwichBarButton">
-          <h2><a href="">Activities</a></h2>
+          <h2><a href="{{ site.baseurl }}/activities">Activities</a></h2>
           <div class="sandwichBarArrow">
             <img src="{{ site.baseurl }}/assets/sandwichNav/sandwichNav-arrow-light.svg" class="sandwichBarArrow">
             <img src="{{ site.baseurl }}/assets/sandwichNav/sandwichNav-arrow-dark.svg" class="sandwichBarArrow dark">
@@ -91,17 +91,22 @@
         </div>
         <div class="sandwichBarContent">
           <ul>
-            <li><a href="">6-8</a></li>
-            <li><a href="">8-10</a></li>
-            <li><a href="">10-12</a></li>
-            <li><a href="">12-14</a></li>
-            <li><a href="">14+</a></li>
+            <li><a href="{{ site.baseurl }}/activities/6-8">6-8</a></li>
+            <li><a href="{{ site.baseurl }}/activities/8-10">8-10</a></li>
+            <li><a href="{{ site.baseurl }}/activities/10-12">10-12</a></li>
+            <li><a href="{{ site.baseurl }}/activities/12-14">12-14</a></li>
+            <li><a href="{{ site.baseurl }}/activities/14+">14+</a></li>
           </ul>
         </div>
       </div>
       <div class="sandwichBar">
         <div class="sandwichBarButton">
-          <h2><a href="">Volunteering</a></h2>
+          <h2><a href="{{ site.baseurl }}/volunteering">Volunteering</a></h2>
+        </div>
+      </div>
+      <div class="sandwichBar">
+        <div class="sandwichBarButton">
+          <h2><a href="{{ site.baseurl }}/donations">Donations</a></h2>
         </div>
       </div>
     </sandwichNav>
@@ -171,7 +176,7 @@
     <script src="{{ site.baseurl }}/js/accessibility.js" charset="utf-8"></script>
 
     {{ content }}
-
+    
     <footer>
 
     </footer>
