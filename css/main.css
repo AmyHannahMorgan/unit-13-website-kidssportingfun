@@ -495,6 +495,67 @@ sandwichNav.open {
   transition: var(--icon-transition);
 }
 
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin: 2vh 1vw;
+
+  max-width: 100vw;
+}
+
+.buttonContainer > .activityButton {
+  width: 50vw;
+  height: 25vw;
+  margin: 1vh 1vw;
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonContainer > .activityButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-image: url("https://images.pexels.com/photos/1227513/pexels-photo-1227513.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: auto 100%;
+
+  /* filter: blur(2px) grayscale(100%);
+  transition: filter 0.25s ease; */
+}
+
+/* .buttonContainer > .activityButton:hover::before {
+  filter: blur(0px) grayscale(0%);
+} */
+
+.buttonContainer > .activityButton * {
+  position: relative;
+}
+
+.buttonContainer > .activityButton > h2 {
+  text-align: center;
+  width: 100%;
+
+  margin: 0;
+}
+
+.buttonContainer > .activityButton > h2 > a {
+  text-decoration: none;
+  color: var(--text-color-light);
+}
+
 /* dark mode changes */
 body.dark {
   background-color: var(--text-color-light);
