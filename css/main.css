@@ -358,7 +358,7 @@ sandwichNav.open {
 
 .access {
   position: fixed;
-  right: -100vw;
+  right: -150%;
   top: 0;
 
   width: 100vw;
@@ -369,6 +369,7 @@ sandwichNav.open {
   transition: right 0.25s ease, var(--bg-transition);
 
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .access.open {
@@ -378,7 +379,7 @@ sandwichNav.open {
 .access > h2 {
   font-size: 2rem;
 
-  width: 100%;
+  width: 100vw;
 
   border-bottom: medium solid var(--highlight-color-light);
 }
@@ -632,5 +633,24 @@ body.dark > header > nav > .dropdown > .dropdownHover {
 
   sandwichNav {
     display: none;
+  }
+
+  .access {
+    width: auto;
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  body > h2, body > p {
+    width: 75vw;
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  body > h2, body > p {
+    width: 50vw;
+    margin: auto;
   }
 }
