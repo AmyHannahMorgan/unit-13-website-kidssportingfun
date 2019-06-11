@@ -370,6 +370,8 @@ sandwichNav.open {
   transition: right 0.25s ease, var(--bg-transition);
 
   overflow-y: scroll;
+
+  z-index: 2;
 }
 
 .access.open {
@@ -516,6 +518,8 @@ sandwichNav.open {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  z-index: 1;
 }
 
 .buttonContainer > .activityButton::before {
@@ -531,14 +535,7 @@ sandwichNav.open {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: auto 100%;
-
-  /* filter: blur(2px) grayscale(100%);
-  transition: filter 0.25s ease; */
 }
-
-/* .buttonContainer > .activityButton:hover::before {
-  filter: blur(0px) grayscale(0%);
-} */
 
 .buttonContainer > .activityButton * {
   position: relative;
@@ -704,6 +701,15 @@ body.dark > header > nav > .dropdown > .dropdownHover {
 
   sandwichNav {
     display: none;
+  }
+
+  .buttonContainer > .activityButton::before {
+    filter: blur(1px) grayscale(100%);
+    transition: filter 0.25s ease;
+  }
+
+  .buttonContainer > .activityButton:hover::before {
+    filter: blur(0px) grayscale(0%);
   }
 }
 
