@@ -681,6 +681,16 @@ body.dark > header > nav > .dropdown > .dropdownHover {
   body ul {
     font-size: 1rem;
   }
+
+  .buttonContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .buttonContainer > .activityButton {
+    width: 30vw;
+    height: 15vw;
+  }
 }
 
 @media only screen and (hover: hover) {
