@@ -78,6 +78,15 @@ body form input {
   color: var(--text-color-light) !important;
 }
 
+body > img {
+  width: 90vw;
+  max-height: 500px;
+  object-fit: contain;
+
+  display: block;
+  margin: auto;
+}
+
 header {
   position: sticky;
   top: 0;
@@ -751,7 +760,7 @@ body.dark > header > nav > .dropdown > .dropdownHover {
 }
 
 @media only screen and (min-width: 1000px){
-  body h2, body p, body ul, body form {
+  body h2, body p, body ul, body form, body > img {
     width: 75vw;
     margin-left: auto;
     margin-right: auto;
