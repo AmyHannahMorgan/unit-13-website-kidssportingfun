@@ -52,14 +52,30 @@ body p {
 body ul {
   font-family: var(--body-font);
   font-size: 1.25rem;
-  
+
   white-space: pre-line;
-  
+
   transition: var(--text-transition);
 }
 
 body > ul li {
   margin-top: -1em;
+}
+
+body form {
+  margin: 0 1vw;
+
+  padding-bottom: 50px;
+}
+
+body form p {
+  display: inline-block;
+  font-size: 1.5rem;
+}
+
+body form input {
+  font-size: 1.5rem;
+  color: var(--text-color-light) !important;
 }
 
 header {
@@ -158,6 +174,7 @@ header > nav > .dropdown:last-of-type > .dropdownHover {
 
 header > nav > .dropdown > .dropdownHover > p {
   margin: 5px;
+  text-align: center;
 }
 
 header > nav > .dropdown > .dropdownHover > p > a {
@@ -358,7 +375,7 @@ sandwichNav.open {
 
 .access {
   position: fixed;
-  right: -150%;
+  right: -100vw;
   top: 0;
 
   width: 100vw;
@@ -369,7 +386,8 @@ sandwichNav.open {
   transition: right 0.25s ease, var(--bg-transition);
 
   overflow-y: scroll;
-  overflow-x: hidden;
+
+  z-index: 2;
 }
 
 .access.open {
@@ -379,7 +397,7 @@ sandwichNav.open {
 .access > h2 {
   font-size: 2rem;
 
-  width: 100vw;
+  width: 100%;
 
   border-bottom: medium solid var(--highlight-color-light);
 }
@@ -389,7 +407,7 @@ sandwichNav.open {
   display: flex;
   align-items: center;
 
-  font-size: 25px
+  font-size: 25px;
 }
 
 .textSizeSelector > .selector {
@@ -493,6 +511,62 @@ sandwichNav.open {
   opacity: 0;
 
   transition: var(--icon-transition);
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin: 2vh 1vw;
+
+  max-width: 100vw;
+}
+
+.buttonContainer > .activityButton {
+  width: 50vw;
+  height: 25vw;
+  margin: 1vh 1vw;
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1;
+}
+
+.buttonContainer > .activityButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-image: url("https://images.pexels.com/photos/1227513/pexels-photo-1227513.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: auto 100%;
+}
+
+.buttonContainer > .activityButton * {
+  position: relative;
+}
+
+.buttonContainer > .activityButton > h2 {
+  text-align: center;
+  width: 100%;
+
+  margin: 0;
+}
+
+.buttonContainer > .activityButton > h2 > a {
+  text-decoration: none;
+  color: var(--text-color-light);
 }
 
 /* dark mode changes */
@@ -616,9 +690,27 @@ body.dark > header > nav > .dropdown > .dropdownHover {
   body p {
     font-size: 1rem;
   }
-  
+
   body ul {
     font-size: 1rem;
+  }
+
+  body form p {
+    font-size: 1rem;
+  }
+
+  body form input {
+    font-size: 1rem;
+  }
+
+  .buttonContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .buttonContainer > .activityButton {
+    width: 30vw;
+    height: 15vw;
   }
 }
 
@@ -635,22 +727,20 @@ body.dark > header > nav > .dropdown > .dropdownHover {
     display: none;
   }
 
-  .access {
-    width: auto;
-    height: auto;
+  .buttonContainer > .activityButton::before {
+    filter: blur(1px) grayscale(100%);
+    transition: filter 0.25s ease;
+  }
+
+  .buttonContainer > .activityButton:hover::before {
+    filter: blur(0px) grayscale(0%);
   }
 }
 
-@media only screen and (min-width: 1200px) {
-  body > h2, body > p {
+@media only screen and (min-width: 1000px){
+  body h2, body p, body ul, body form {
     width: 75vw;
-    margin: auto;
-  }
-}
-
-@media only screen and (min-width: 1500px) {
-  body > h2, body > p {
-    width: 50vw;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
